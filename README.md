@@ -3,7 +3,7 @@ Downloads JAR files from urls and unzipps them right away from your package.json
 
 ## Installation
 
-`npm install @jdaudier/number-formatter`
+`npm install unjar-from-url`
 
 ## Usage
 
