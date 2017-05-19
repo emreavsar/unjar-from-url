@@ -1,0 +1,33 @@
+{
+  "name": "unjar-from-url",
+  "version": "1.0.0",
+  "description": "Downloads JAR files from urls and unzipps them right away from your package.json Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emreavsar/unjar-from-url.git"
+  },
+  "keywords": [
+    "unjar",
+    "download",
+    "file",
+    "dependency",
+    "http"
+  ],
+  "author": "Emre Avsar <emre.avsar92@gmail.com> (www.avsar.ch)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emreavsar/unjar-from-url/issues"
+  },
+  "homepage": "https://github.com/emreavsar/unjar-from-url#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
+  }
+}
