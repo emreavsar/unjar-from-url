@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/emreavsar/unjar-from-url.svg?branch=master)](https://travis-ci.org/emreavsar/unjar-from-url)
+
+[![Coverage Status](https://coveralls.io/repos/github/emreavsar/unjar-from-url/badge.svg?branch=master)](https://coveralls.io/github/emreavsar/unjar-from-url?branch=master)
+
 # unjar-from-url
 Downloads JAR files from urls and unzipps them right away from your package.json
 
