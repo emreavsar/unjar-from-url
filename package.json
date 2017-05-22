@@ -1,6 +1,6 @@
 {
   "name": "unjar-from-url",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Downloads JAR files from urls and unzipps them right away from your package.json Edit",
   "main": "index.js",
   "scripts": {
