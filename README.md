@@ -7,7 +7,7 @@ Downloads JAR files from urls and unzipps them right away from your package.json
 
 ## Installation
 
-`npm install unjar-from-url --save` if you want to use it in your project
+`npm install unjar-from-url --save-dev` if you want to use it in your project
 
 `npm install unjar-from-url --global` if you want to use it globally on command line
 
