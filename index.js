@@ -183,7 +183,14 @@ var downloadJar = function (nodeModulesDir, unzipDirectory, url) {
 
 	// makes programming easier (create the directory anyway)
 	if (!fs.existsSync(fileDirectory)) {
-		fs.mkdirSync(fileDirectory);
+		// mkdir -p fileDirectory
+		fileDirectory.split('/').forEach((dir, index, splits) => {
+			const parent = splits.slice(0, index).join('/');
+			const dirPath = path.resolve(parent, dir);
+			if (!fs.existsSync(dirPath)) {
+				fs.mkdirSync(dirPath);
+			}
+		});
 	}
 
 	// delete directory with file in it, and after that download the file into newly created folder
