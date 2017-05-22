@@ -32,5 +32,13 @@
     "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.1"
+  },
+  "dependencies": {
+    "decompress-zip": "^0.3.0",
+    "download": "^6.1.0",
+    "download-file-sync": "^1.0.4",
+    "package-json": "^4.0.1",
+    "path": "^0.12.7",
+    "rmdir": "^1.2.0"
   }
 }
