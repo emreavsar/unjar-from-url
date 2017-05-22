@@ -17,8 +17,8 @@ Downloads JAR files from urls and unzipps them right away from your package.json
 In your `package.json`:
 ```
 "scripts": {
-    // in case of you want to download jars brefore the install process
-    "preinstall": "unjar-from-url"
+    // in case of you want to download jars after the install process
+    "postinstall": "unjar-from-url"
 },
 // ...
 "unjar-from-url-config": [
