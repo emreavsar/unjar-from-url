@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 'use strict';
 
 /**
@@ -106,6 +107,8 @@ var getUnjarConfigurationFromArgs = function () {
  * @param {module} module to start searching the configuration file 
  */
 var getUnjarConfigurationFromPackageJson = function (module) {
+	const configKey = 'unjar-from-url-config';
+
 	if (module == null) {
 		return [];
 	}
@@ -135,7 +138,10 @@ var getUnjarConfigurationFromPackageJson = function (module) {
 	// read the package json
 	var packageJson = require(pathToNodeModules + "package.json");
 
-	var unjarFromUrlConfig = packageJson['unjar-config'];
+	var unjarFromUrlConfig;
+	if (packageJson != null && packageJson[configKey] != null) {
+		unjarFromUrlConfig = packageJson[configKey];
+	}
 
 	if (unjarFromUrlConfig != null) {
 		// add the highest parent path (used as nodeModulesDir later) to each item

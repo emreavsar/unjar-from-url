@@ -16,13 +16,20 @@ Downloads JAR files from urls and unzipps them right away from your package.json
 ### In your project (package.json)
 In your `package.json`:
 ```
-"unjar-config": [
+"scripts": {
+    "unjar": "node -e 'require(\"unjar-from-url\")'"
+},
+// ...
+"unjar-from-url-config": [
     {
         "directory": "selenium-server-standalone":
         "url": "http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar",
     }
 ]
 ```
+
+Run with `npm run-script unjar`.
+
 This will download and uncompress the jar files into folder `node_modules/selenium-server-standalone`.
 
 ### Command line (no package.json)
