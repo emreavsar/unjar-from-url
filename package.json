@@ -40,5 +40,8 @@
     "package-json": "^4.0.1",
     "path": "^0.12.7",
     "rmdir": "^1.2.0"
+  },
+  "bin": {
+    "unjar-from-url": "index.js"
   }
 }

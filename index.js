@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 /**
@@ -91,7 +92,7 @@ var getUnjarConfigurationFromArgs = function () {
  * <pre><code>
  * // package.json of your project
  * ...
- * unjarConfig: [
+ * unjar-config: [
  * 		{
  * 			"directory": "selenium-server-standalone",
  * 			"url": "http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar"
@@ -134,7 +135,7 @@ var getUnjarConfigurationFromPackageJson = function (module) {
 	// read the package json
 	var packageJson = require(pathToNodeModules + "package.json");
 
-	var unjarFromUrlConfig = packageJson['config'];
+	var unjarFromUrlConfig = packageJson['unjar-config'];
 
 	if (unjarFromUrlConfig != null) {
 		// add the highest parent path (used as nodeModulesDir later) to each item

@@ -3,23 +3,39 @@
 [![Coverage Status](https://coveralls.io/repos/github/emreavsar/unjar-from-url/badge.svg?branch=master)](https://coveralls.io/github/emreavsar/unjar-from-url?branch=master)
 
 # unjar-from-url
-Downloads JAR files from urls and unzipps them right away from your package.json
+Downloads JAR files from urls and unzipps them right away from your package.json or command line arguments
 
 ## Installation
 
-`npm install unjar-from-url`
+`npm install unjar-from-url --save` if you want to use it in your project
+
+`npm install unjar-from-url --global` if you want to use it globally on command line
 
 ## Usage
 
+### In your project (package.json)
 In your `package.json`:
 ```
-"fileDependencies": {
-    "selenium-server-standalone":
-    "http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar",
-}
-```  
-  
-This will download and uncompress the jar files into folder `node_modules/unjar-from-url/selenium-server-standalone`.
+"unjar-config": [
+    {
+        "directory": "selenium-server-standalone":
+        "url": "http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar",
+    }
+]
+```
+This will download and uncompress the jar files into folder `node_modules/selenium-server-standalone`.
+
+### Command line (no package.json)
+In your command line:
+
+```
+unjar-from-url \
+--urls http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar  \
+--download-dirs selenium-server-standalone  \
+--destination-dirs=/tmp
+```
+
+This will download and uncompress the jar files into folder `/tmp/selenium-server-standalone`.
 
 ## Tests
 
